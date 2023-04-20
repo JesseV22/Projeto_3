@@ -23,7 +23,7 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ImageIcon imageicon = new ImageIcon(getClass().getResource("imagens/tela_inicial.jpg"));
+        ImageIcon imageicon = new ImageIcon(getClass().getResource("imagens/drop.jpg"));
         Image image = imageicon.getImage();
 
         desktopPane = new javax.swing.JDesktopPane(){

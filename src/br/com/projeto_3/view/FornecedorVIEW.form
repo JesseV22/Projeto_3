@@ -36,18 +36,14 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="cnpj_for" alignment="0" min="-2" pref="208" max="-2" attributes="0"/>
-                          <Component id="nome_for" alignment="0" min="-2" pref="403" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="tel_for" min="-2" pref="119" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextField1" max="32767" attributes="0"/>
-                                  <Component id="data_cad_for" pref="164" max="32767" attributes="0"/>
-                                  <Component id="jFormattedTextField1" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="data_cad_for" min="-2" pref="164" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="nome_for" alignment="0" min="-2" pref="403" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -110,7 +106,7 @@
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="150" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="144" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -130,11 +126,7 @@
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="data_cad_for" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jFormattedTextField1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -185,7 +177,7 @@
     <Component class="javax.swing.JButton" name="btnNovo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto_2/view/imagens/novo.png"/>
+          <Image iconType="3" name="/br/com/projeto_3/view/imagens/novo.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Novo"/>
       </Properties>
@@ -214,7 +206,7 @@
     <Component class="javax.swing.JButton" name="btnSalvar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto_2/view/imagens/salvar.png"/>
+          <Image iconType="3" name="/br/com/projeto_3/view/imagens/salvar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Salvar"/>
       </Properties>
@@ -225,7 +217,7 @@
     <Component class="javax.swing.JButton" name="btnCancelar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto_2/view/imagens/cancelar.png"/>
+          <Image iconType="3" name="/br/com/projeto_3/view/imagens/cancelar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
@@ -236,7 +228,7 @@
     <Component class="javax.swing.JButton" name="btnExcluir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto_2/view/imagens/excluir.png"/>
+          <Image iconType="3" name="/br/com/projeto_3/view/imagens/excluir.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
       </Properties>
@@ -247,7 +239,7 @@
     <Component class="javax.swing.JButton" name="btnSair">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto_2/view/imagens/sair.png"/>
+          <Image iconType="3" name="/br/com/projeto_3/view/imagens/sair.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
@@ -275,7 +267,7 @@
     <Component class="javax.swing.JButton" name="btnPesquisar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto_2/view/imagens/pesquisar.png"/>
+          <Image iconType="3" name="/br/com/projeto_3/view/imagens/pesquisar.png"/>
         </Property>
       </Properties>
       <Events>
@@ -322,18 +314,6 @@
       </SubComponents>
     </Container>
     <Component class="javax.swing.JFormattedTextField" name="data_cad_for">
-      <Properties>
-        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-          <Format format="##/##/####" subtype="-1" type="5"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="##/##/####" subtype="-1" type="5"/>

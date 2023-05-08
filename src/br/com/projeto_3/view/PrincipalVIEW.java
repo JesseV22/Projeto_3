@@ -23,6 +23,9 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
         ImageIcon imageicon = new ImageIcon(getClass().getResource("imagens/drop.jpg"));
         Image image = imageicon.getImage();
 
@@ -35,17 +38,31 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         ;
         menuBar = new javax.swing.JMenuBar();
         menuCadastro = new javax.swing.JMenu();
+        itemMenuCliente = new javax.swing.JMenuItem();
         itemMenuFornecedor = new javax.swing.JMenuItem();
         itemMenuProduto = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         menuVenda = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        itemMenuVenda = new javax.swing.JMenuItem();
         menuSair = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem3.setText("jMenuItem3");
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         menuCadastro.setMnemonic('c');
         menuCadastro.setText("Cadastro");
+
+        itemMenuCliente.setText("Cliente");
+        itemMenuCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemMenuClienteActionPerformed(evt);
+            }
+        });
+        menuCadastro.add(itemMenuCliente);
 
         itemMenuFornecedor.setMnemonic('f');
         itemMenuFornecedor.setText("Fornecedor");
@@ -65,15 +82,17 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         });
         menuCadastro.add(itemMenuProduto);
 
-        jMenuItem1.setText("Cliente");
-        menuCadastro.add(jMenuItem1);
-
         menuBar.add(menuCadastro);
 
         menuVenda.setText("Venda");
 
-        jMenuItem2.setText("Realizar Venda");
-        menuVenda.add(jMenuItem2);
+        itemMenuVenda.setText("Realizar Venda");
+        itemMenuVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemMenuVendaActionPerformed(evt);
+            }
+        });
+        menuVenda.add(itemMenuVenda);
 
         menuBar.add(menuVenda);
 
@@ -93,13 +112,13 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 885, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1867, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -118,16 +137,36 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         abreProdutoVIEW();
     }//GEN-LAST:event_itemMenuProdutoActionPerformed
 
+    private void itemMenuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuClienteActionPerformed
+        abreClienteVIEW();
+    }//GEN-LAST:event_itemMenuClienteActionPerformed
+
+    private void itemMenuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuVendaActionPerformed
+        abreVendaVIEW();        
+    }//GEN-LAST:event_itemMenuVendaActionPerformed
+
     /**
      * Método para fechar o sistema.
      */ 
-    private void sair(){
+   private void sair(){
         Object[] options = { "Sair", "Cancelar" };
         if(JOptionPane.showOptionDialog(null, "Deseja Sair do Sistema", "Informação", 
                 JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]) == 0){
             System.exit(0);
         } 
     } 
+    
+    
+    /**
+     * Método para abrir a classe ClienteVIEW.
+     */
+    private void abreClienteVIEW(){
+        ClienteVIEW clienteVIEW = new ClienteVIEW();
+        this.desktopPane.add(clienteVIEW);
+        clienteVIEW.setVisible(true); 
+        clienteVIEW.setPosicao();
+    }
+    
     
     /**
      * Método para abrir a classe FornecedorVIEW.
@@ -150,6 +189,12 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         produtoVIEW.setPosicao();
     }
     
+    private void abreVendaVIEW(){
+        VendaVIEW vendaVIEW = new VendaVIEW();
+        this.desktopPane.add(vendaVIEW);
+        vendaVIEW.setVisible(true); 
+        vendaVIEW.setPosicao();
+    }
     
     /**
      * @param args the command line arguments
@@ -178,12 +223,6 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -195,10 +234,13 @@ public class PrincipalVIEW extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPane;
+    private javax.swing.JMenuItem itemMenuCliente;
     private javax.swing.JMenuItem itemMenuFornecedor;
     private javax.swing.JMenuItem itemMenuProduto;
+    private javax.swing.JMenuItem itemMenuVenda;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuCadastro;
     private javax.swing.JMenu menuSair;
